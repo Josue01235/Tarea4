@@ -38,3 +38,78 @@ subsidio = calcular_subsidio(cantidad_hijos, edades_hijos, madre_viuda)
 print(f"El monto mensual del subsidio es: Q. {subsidio:.2f}")
 -----------------------------------------------------------------------------------------------------------------------------------------
                                 Ejercicio 2 Python 
+import random
+
+def comparar_vectores(vector_a, vector_b):
+    suma_a = sum(vector_a)
+    suma_b = sum(vector_b)
+
+    if suma_a == suma_b:
+        return "Los vectores son iguales."
+    elif suma_a < suma_b:
+        return "El vector A es menor que el vector B."
+    else:
+        return "El vector B es menor que el vector A."
+
+# Solicitamos al usuario la longitud de los vectores
+longitud = int(input("Ingrese la longitud de los vectores: "))
+
+# llenamos los vectores aleatoriamente
+vector_a = [random.randint(1, 100) for _ in range(longitud)]
+vector_b = [random.randint(1, 100) for _ in range(longitud)]
+
+# Mostrar los vectores
+print("Vector A:", vector_a)
+print("Vector B:", vector_b)
+
+# Comparar y mostrar el resultado
+resultado = comparar_vectores(vector_a, vector_b)
+print(resultado)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                        Ejercicio 3 Python
+def calcular_rango(datos):
+    if not datos:
+        return None  # Devolver None si la lista de datos está vacía
+
+    maximo = datos[0]
+    minimo = datos[0]
+
+    for dato in datos:
+        if dato > maximo:
+            maximo = dato
+        if dato < minimo:
+            minimo = dato
+
+    return maximo - minimo
+
+# Preguntar al usuario cuántos datos serán ingresados
+cantidad_datos = int(input("Ingrese la cantidad de datos: "))
+
+# Pida al usuario ingresar los datos uno por uno
+datos = []
+for i in range(cantidad_datos):
+    dato = float(input(f"Ingrese el dato {i + 1}: "))
+    datos.append(dato)
+
+# Calcular y mostrar el rango de los datos
+rango = calcular_rango(datos)
+if rango is not None:
+    print(f"El rango de los datos es: {rango}")
+else:
+    print("No se ingresaron datos.")
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                    Ejercicio 4 Python
+def dibujar_cuadrado(lado):
+    for i in range(lado):
+        for j in range(lado):
+            if i == 0 or i == lado - 1 or j == 0 or j == lado - 1:
+                print("* ", end="")
+            else:
+                print("  ", end="")
+        print()
+
+# Solicitar al usuario ingresar el lado del cuadrado
+lado = int(input("Ingrese el lado del cuadrado: "))
+
+# Dibujar el cuadrado
+dibujar_cuadrado(lado
