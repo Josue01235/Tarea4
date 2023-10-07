@@ -1,4 +1,5 @@
-                        Ejercicia 1 Python 
+Captura de copilaciones: https://drive.google.com/file/d/16BxYbko893gMLql50SCgTalps1nA4tE-/view
+                                    Ejercicia 1 Python 
 def calcular_subsidio(cantidad_hijos, edades_hijos, madre_viuda):
     monto_subsidio = 0
 
